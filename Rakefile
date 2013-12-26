@@ -6,7 +6,7 @@ require './nobrainer_runner'
 desc 'runs the benchmarks'
 task :run do
 
-  puts "Performing #{Runner.insert_num} inserts, #{Runner.read_num} reads, and #{Runner.update_nun} updates."
+  puts "Performing #{Runner.run_num} inserts, reads, and updates."
 
   puts `ruby -v`
   puts ''

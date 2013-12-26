@@ -9,7 +9,7 @@ The current libraries being used are
 
 * Moped (MongoDB low level driver)
 * Mongoid (MongoDB ODM)
-* Rethink (RethinkDB official driver)
+* RethinkDB (RethinkDB official driver)
 * NoBrainer (RethinkDB ODM)
 
 ## Usage
@@ -48,34 +48,34 @@ This is meant to be a benchmark of simple, individual operations. There are no i
 
 These are the latest results on my development machine (MacBook Pro with 2.4 GHz Core i5, 8 GB RAM, HDD):
 
-	Performing 1000 inserts, 1000 reads, and 1000 updates.
-    ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.2.0]
+	Performing 2000 inserts, reads, and updates.
+    ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.3.0]
 
     :: Moped ::
     * db version v2.0.6, pdfile version 4.5 (safe: true)
-    Total insert time: 0.74 seconds (1358.9 inserts/second)
-    Total read time: 0.74 seconds (132187.7 reads/second)
-    Total update time: 0.74 seconds (1352.7 updates/second)
+    Total insert time: 1.02 seconds (1961.0 inserts/second)
+    Total read time: 0.01 seconds (305997.6 reads/second)
+    Total update time: 0.95 seconds (2104.4 updates/second)
 
     :: Mongoid ::
-    Total insert time: 2.36 seconds (424.2 inserts/second)
-    Total read time: 2.36 seconds (1005.0 reads/second)
-    Total update time: 2.73 seconds (366.9 updates/second)
+    Total insert time: 2.19 seconds (912.2 inserts/second)
+    Total read time: 1.26 seconds (1589.9 reads/second)
+    Total update time: 3.56 seconds (562.6 updates/second)
 
-    Moped performs inserts at 320.3%, reads at 13152.7%, and updates at 368.6% the speed of Mongoid.
+    Moped performs inserts at 215.0%, reads at 19246.2%, and updates at 374.1% the speed of Mongoid.
 
-    :: Rethink ::
+    :: RethinkDB ::
     * rethinkdb 1.10.0 (CLANG 5.0 (clang-500.2.79)) (durability: soft)
-    Total insert time: 26.47 seconds (37.8 inserts/second)
-    Total read time: 26.47 seconds (50.3 reads/second)
-    Total update time: 29.55 seconds (33.8 updates/second)
+    Total insert time: 26.91 seconds (74.3 inserts/second)
+    Total read time: 18.74 seconds (106.7 reads/second)
+    Total update time: 27.68 seconds (72.3 updates/second)
 
     :: NoBrainer ::
-    Total insert time: 28.94 seconds (34.6 inserts/second)
-    Total read time: 28.94 seconds (19.5 reads/second)
-    Total update time: 120.62 seconds (8.3 updates/second)
+    Total insert time: 28.33 seconds (70.6 inserts/second)
+    Total read time: 49.35 seconds (40.5 reads/second)
+    Total update time: 114.33 seconds (17.5 updates/second)
 
-    Rethink performs inserts at 109.3%, reads at 258.6%, and updates at 408.2% the speed of NoBrainer.
+    RethinkDB performs inserts at 105.3%, reads at 263.3%, and updates at 413.0% the speed of NoBrainer.
 
 # License
 

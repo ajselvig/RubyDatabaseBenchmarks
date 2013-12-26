@@ -18,7 +18,7 @@ class RethinkRunner < Runner
   end
 
   def title
-    'Rethink'
+    'RethinkDB'
   end
 
   def setup
